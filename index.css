@@ -10,7 +10,6 @@
     --dark-grayish-blue: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 59%);
 }
-
 body {
     overflow: hidden;
     position: relative;
@@ -20,19 +19,10 @@ body {
     width: 100vw;
     padding: 0 1.5em;
     background: var(--dark-cyan);
-}
-
-.bg-pattern-top {
-    z-index: 0;
-    position: absolute;
-    width: 3em;
-}
-
-.bg-pattern-bottom {
-    z-index: 0;
-    position: absolute;
-    width: 3em;
-    bottom: 0;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 120% -20%, -20% 120%;
 }
 
 .main {
@@ -99,5 +89,9 @@ body {
 }
 
 @media (min-width: 768px){
-
+    body {
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-repeat: no-repeat;
+        background-position: -50% 300%, 140% -300%;
+    }
 }
